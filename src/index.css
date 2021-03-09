@@ -15,7 +15,13 @@ code {
 
 .card {
   margin: 10px 0;
+  background: #999999;
+  
+}
+.card:hover {
   background: #404040;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s; 
 }
 .card-body{
   background: #fff;
