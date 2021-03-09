@@ -8,15 +8,20 @@ const BookContextProvider =(props)=> {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        const fetchItems = async ()=> {
-            const result = await axios.get('https://api.itbook.store/')
-            console.log(result.data);
-            //setBooks(result.data)
-            //setIsLoading(false)
-        }
-        
-        fetchItems();
-    }, [])
+        fetchBooks();
+    }, []);
+
+    const fetchBooks =()=> {
+        axios.get('https://api.itbook.store/1.0/new')
+            .then(res => {
+                setBooks(res.data.books);
+                setIsLoading(false);
+            })
+            .catch(error => {
+                console.log(error);
+                setIsLoading(true);
+            });
+    };
 
     return (
         <BookContext.Provider value={{books, isLoading}}> 

@@ -8,17 +8,15 @@ const BookGrid = () => {
     let bookGrid = isLoading ? (
         <h3>Fetching items from store</h3>
     ) : (
-        <div className="container">
-            <div className="row">
-                {books.map((book)=> (
-                    <BookItem key={book.id} book={book} />
-                ))}
-            </div>
-        </div>
+        books.map(book => (
+            <BookItem key={book.isbn13} book={book} />
+        ))
     )
     return ( 
-        <div>
-            {bookGrid}
+        <div className="container">
+            <div className="row">
+                {bookGrid}
+            </div>
         </div>
      );
 }
