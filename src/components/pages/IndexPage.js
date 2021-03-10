@@ -3,7 +3,7 @@ import React from 'react';
 const IndexPage = () => {
 
     return ( 
-        <div>
+        <div className="container">
             <h2>This is the index page</h2>
         </div>
      );

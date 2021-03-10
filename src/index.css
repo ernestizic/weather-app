@@ -16,7 +16,6 @@ code {
 .card {
   margin: 10px 0;
   background: #999999;
-  
 }
 .card:hover {
   background: #404040;
@@ -31,6 +30,25 @@ code {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.nav-item {
+  padding-right: 30px;
+}
 
-
-
+.navbar{
+  background: black;
+  padding: 20px;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.8s; 
+}
+.navbar:hover {
+  background: #fff;
+}
+.navbar-brand{
+  color: #fff;
+}
+.nav-link{
+  color: #fff;
+}
+.navbar:hover .nav-link{
+  color: black;
+}

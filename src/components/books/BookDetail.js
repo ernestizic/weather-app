@@ -1,4 +1,4 @@
-import axios from 'axios';
+//import axios from 'axios';
 import React, {useState, useEffect, useContext} from 'react';
 import { BookContext } from '../../contexts/BookContext';
 
@@ -9,12 +9,8 @@ const BookDetail = (props) => {
 
     useEffect(() => {
         const fetchDetails = async ()=> {
-            let id = props.match.params.book_isbn13;
-            axios.get(`https://api.itbook.store/1.0/books/`+ id)
-                .then(res =>
-                    console.log(res.data) 
-                    //setBookDetail(res.data)
-                )
+            console.log(props);     
+            
         }
         fetchDetails();
     }, [props])
