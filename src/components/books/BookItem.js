@@ -9,7 +9,7 @@ const BookItem = (props) => {
                 <div className="card-body">
                     <h5 className="card-title" title={props.book.title}>{props.book.title}</h5>
                     <p className="card-text"><b>Price:</b> {props.book.price}</p>
-                    <Link to={"/" + props.book.isbn13}>PURCHASE</Link>
+                    <Link to={"/books/" + props.book.isbn13}>PURCHASE</Link>
                 </div>
             </div>
         </div>

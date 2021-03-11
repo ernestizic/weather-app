@@ -16,7 +16,7 @@ function App() {
           <Route exact path="/" component={IndexPage} />
           <Route path="/about" component={AboutPage} />
           <Route path="/store" component={StorePage} />
-          <Route path="/:book_isbn13" component={BookDetailPage}/>
+          <Route path="/books/:book_id" component={BookDetailPage}/>
         </Switch>
       </div>
     </BrowserRouter>
