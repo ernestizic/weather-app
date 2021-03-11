@@ -40,11 +40,7 @@ code {
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.4s; 
 }
-/*
-.navbar:hover {
-  background: #fff;
-}
-*/
+
 .navbar-brand{
   color: #fff;
 }
