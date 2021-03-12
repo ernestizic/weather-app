@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, {useState, useEffect} from 'react';
 import { useParams} from 'react-router-dom';
+import Spinner from '../ui/Spinner';
 
 
 
@@ -38,7 +39,7 @@ const BookDetail = () => {
                                 </tr>
                                 <tr>
                                     <td>Rating</td>
-                                    <td>{bookDetail.rating}</td>
+                                    <td>{bookDetail.rating} of 5</td>
                                 </tr>
                                 <tr>
                                     <td>Author</td>
@@ -72,7 +73,7 @@ const BookDetail = () => {
         </React.Fragment>
         
     ) : (
-        <div className="container"> Loading details... </div>
+        <div className="container"><Spinner /> </div>
     )
     return ( 
         <div>                         

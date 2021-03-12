@@ -1,12 +1,15 @@
 import React, { useContext } from 'react';
 import { BookContext } from '../../contexts/BookContext';
+import Spinner from '../ui/Spinner';
 import BookItem from './BookItem';
 
 const BookGrid = () => {
     const {books, isLoading} = useContext(BookContext);
 
     let bookGrid = isLoading ? (
-        <h3>Fetching items from store</h3>
+        <div>
+            <Spinner />
+        </div>
     ) : (
         books.map(book => (
             <BookItem key={book.isbn13} book={book} />
