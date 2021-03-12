@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, {useState, useEffect} from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams} from 'react-router-dom';
+
 
 
 const BookDetail = () => {
@@ -17,15 +18,64 @@ const BookDetail = () => {
     }, [book_id])
 
     const book = bookDetail ? (
-        <div className="container">
-            <h4 style={{ paddingTop: "20px", paddingBottom: "10px" }}>{bookDetail.title}</h4>
-            <p>{bookDetail.price}</p>
-        </div>
+        <React.Fragment>
+            <div className="container-fluid"id="welcome-div">
+                <h2 style={{color: '#030d44', paddingLeft: '40px'}}> {bookDetail.title} </h2>
+            </div>
+
+            <div className="container">
+                <div className="row">
+                    <div className="col-md-3" style={{background:"#f8f8f8"}}>
+                        <img src={bookDetail.image} alt="book-img" className="img-fluid" />
+                    </div>
+                    <div className="col-md-9">
+                        <table className="table table-striped">
+
+                            <tbody>
+                                <tr>
+                                    <td>eBook</td>
+                                    <td>{bookDetail.price}</td>
+                                </tr>
+                                <tr>
+                                    <td>Rating</td>
+                                    <td>{bookDetail.rating}</td>
+                                </tr>
+                                <tr>
+                                    <td>Author</td>
+                                    <td>{bookDetail.authors}</td>
+                                </tr>
+                                <tr>
+                                    <td>Publisher</td>
+                                    <td>{bookDetail.publisher}</td>
+                                </tr>
+                                <tr>
+                                    <td>Published</td>
+                                    <td>{bookDetail.year}</td>
+                                </tr>
+                                <tr>
+                                    <td>Pages</td>
+                                    <td>{bookDetail.pages}</td>
+                                </tr>
+                                <tr>
+                                    <td>Language</td>
+                                    <td>{bookDetail.language}</td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+
+                        <h5>Description</h5>
+                        <p>{bookDetail.desc}</p>
+                    </div>
+                </div>
+            </div>
+        </React.Fragment>
+        
     ) : (
         <div className="container"> Loading details... </div>
     )
     return ( 
-        <div>
+        <div>                         
             {book} 
         </div>
      );

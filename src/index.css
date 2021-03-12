@@ -1,8 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #505050;
@@ -40,7 +38,11 @@ code {
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.4s; 
 }
-
+/*
+.navbar:hover {
+  background: #fff;
+}
+*/
 .navbar-brand{
   color: #fff;
 }
@@ -59,3 +61,17 @@ code {
 .navbar-toggler {
   margin: none;
 } 
+#welcome-div{
+  background: rgb(240, 240, 240);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+.links{
+  text-decoration: none;
+}
+
+.footer {
+  background-color: #134b72;
+  color: white;
+  text-align: center;
+}

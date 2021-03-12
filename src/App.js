@@ -4,6 +4,7 @@ import IndexPage from './components/pages/IndexPage';
 import AboutPage from './components/pages/AboutPage';
 import StorePage from './components/pages/StorePage';
 import BookDetailPage from "./components/pages/BookDetailPage";
+import Footer from "./components/ui/Footer";
 
 
 function App() {
@@ -18,6 +19,8 @@ function App() {
           <Route path="/store" component={StorePage} />
           <Route path="/books/:book_id" component={BookDetailPage}/>
         </Switch>
+
+        <Footer />
       </div>
     </BrowserRouter>
   );
