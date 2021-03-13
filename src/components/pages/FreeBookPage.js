@@ -1,9 +1,10 @@
 import React from 'react';
-import BookContextProvider from '../../contexts/BookContext';
-import BookGrid from '../books/BookGrid';
 import { Link } from 'react-router-dom';
+import BookContextProvider from '../../contexts/BookContext';
+import FreeBook from '../books/FreeBook';
 
 const FreeBookPage = () => {
+
     return ( 
         <React.Fragment>
             <div className="container-fluid" id="welcome-div">
@@ -12,7 +13,7 @@ const FreeBookPage = () => {
             <div className="container">
                 <h5 style={{paddingTop: "20px"}}> <Link className="links" to="/"> Home </Link> / Free eBooks </h5>
                 <BookContextProvider>
-                    <BookGrid />
+                    <FreeBook />
                 </BookContextProvider>
             </div>
         </React.Fragment>

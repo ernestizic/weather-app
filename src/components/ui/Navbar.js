@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../img/itbookstorelogo.png'
+import Searchbar from './Searchbar';
 
 const Navbar = () => {
     return ( 
@@ -24,7 +25,9 @@ const Navbar = () => {
                         </li>
                     </ul>
                 </div>
+                
             </div>
+            <Searchbar />
         </nav>
      );
 }
