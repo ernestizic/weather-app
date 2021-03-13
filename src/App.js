@@ -12,7 +12,6 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Navbar />
-
         <Switch>
           <Route exact path="/" component={IndexPage} />
           <Route path="/about" component={AboutPage} />

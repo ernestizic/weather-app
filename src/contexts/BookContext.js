@@ -6,6 +6,7 @@ export const BookContext = createContext();
 const BookContextProvider =(props)=> {
     const [books, setBooks] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+    const [query, setQuery] = useState("");
 
     useEffect(() => {
         fetchBooks();
@@ -23,8 +24,16 @@ const BookContextProvider =(props)=> {
             });
     };
 
+    useEffect(() => {
+        const fetchQuery = async() => {
+            const res = await axios(`https://api.itbook.store/1.0/search/${query}`)
+                setQuery(res.data)
+        }
+        fetchQuery();
+    }, [query])
+
     return (
-        <BookContext.Provider value={{books, isLoading}}> 
+        <BookContext.Provider value={{books, isLoading, query}}> 
             {props.children}
         </BookContext.Provider>
     )

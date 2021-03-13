@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import BookContextProvider from '../../contexts/BookContext';
 import logo from '../../img/itbookstorelogo.png'
 import Searchbar from './Searchbar';
 
 const Navbar = () => {
+
     return ( 
         <nav className="navbar navbar-expand-md">
             <div className="container-fluid">
@@ -27,7 +29,9 @@ const Navbar = () => {
                 </div>
                 
             </div>
-            <Searchbar />
+            <BookContextProvider>
+                <Searchbar />
+            </BookContextProvider>
         </nav>
      );
 }
