@@ -3,24 +3,25 @@ import { BookContext } from '../../contexts/BookContext';
 
 const Searchbar = () => {
 
-    const {query} = useContext(BookContext);
+    const {searchBooks} = useContext(BookContext);
 
-    const [searchText, setSearchText] = useState("");
+    const [query, setQuery] = useState("");
 
-    const handleSubmit =(e)=> {
+    const handleSearch =(e)=> {
         e.preventDefault();
-        console.log(searchText);
+        //console.log(query);
+        searchBooks(query);
     }
 
     return ( 
-        <form className="search" onSubmit={handleSubmit}>
+        <form className="search" onSubmit={handleSearch}>
             <div className="input-group">
                 <input 
                     type="search" 
                     className="form-control"
                     placeholder="Search books by Title, Author or ISBN"
-                    value={searchText}
-                    onChange={(e)=> setSearchText(e.target.value)} 
+                    value={query}
+                    onChange={(e)=> setQuery(e.target.value)} 
                 />
                 <div className="input-group-append">
                     <button className="btn btn-danger" type="submit"> 

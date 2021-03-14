@@ -3,7 +3,7 @@ import BookContextProvider from '../../contexts/BookContext';
 import BookGrid from '../books/BookGrid';
 
 const IndexPage = () => {
-
+    
     return ( 
         <React.Fragment>
             <div className="container-fluid" id="welcome-div">
