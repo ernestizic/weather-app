@@ -13,13 +13,14 @@ code {
 
 .card {
   margin: 10px 0;
-  background: #999999;
+  /*background: #999999; */
+  border: 1px solid #fff;
 }
+
 .card:hover {
-  background: #404040;
-  -webkit-transition-duration: 0.4s;
-  transition-duration: 0.4s; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 .card-body{
   background: #fff;
 }
@@ -35,7 +36,7 @@ code {
 .navbar{
   background: #134b72;
   padding: 20px;
-  -webkit-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s; 
 }
 /*
@@ -81,3 +82,62 @@ code {
 .search {
   width: 100%;
 }
+
+.rate {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.rate li{
+  float: left;
+}
+.checked {
+  color: orange
+}
+
+/* social icons css */
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  height: 45px;
+  width: 50px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+.icon-bar a:hover {
+    width: 65px;
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background: #55ACEE;
+  color: white;
+}
+.reddit {
+  background: orangered;
+  color: white;
+}
+.pininterest {
+  background: rgb(180, 20, 20);
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+/* Social icons css ends here */

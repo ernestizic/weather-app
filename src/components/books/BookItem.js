@@ -8,8 +8,8 @@ const BookItem = (props) => {
                 <div className="card">
                     <img className="card-img-top" src={props.book.image} alt="Card img cap" />
                     <div className="card-body">
-                        <h5 className="card-title" title={props.book.title}>{props.book.title}</h5>
-                        <p className="card-text"><b>Price:</b> {props.book.price}</p>
+                        <p className="card-title" title={props.book.title}>{props.book.title}</p>
+                        <p className="card-text" style={{color: '#b2395b', fontWeight: 'bold'}}>{props.book.price}</p>
                     </div>
                 </div>
             </Link>

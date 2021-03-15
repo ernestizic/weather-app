@@ -12,10 +12,10 @@ const BookContextProvider =(props)=> {
     const searchBooks =(query)=> {
         axios.get(`https://api.itbook.store/1.0/search/${query}`)
             .then(res => {
-                console.log(res.data.books)
-                //setIsLoading(false);
-                //setSearched(res.data.books);
-                //setIsLoading(false);
+                //console.log(res.data.books)
+                setIsLoading(true);
+                setSearched(res.data.books);
+                setIsLoading(false);
             })
     }
 
