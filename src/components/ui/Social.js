@@ -1,15 +1,15 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 
 
 const Social = () => {
     return ( 
         <div class="icon-bar">
-            <a href="#" className="facebook"><i className="fa fa-facebook-square"></i></a> 
-            <a href="#" className="twitter"><i className="fa fa-twitter"></i></a> 
-            <a href="#" className="reddit"><i className="fa fa-reddit-alien"></i></a> 
-            <a href="#" className="pininterest"><i className="fa fa-pinterest"></i></a> 
-            <a href="#" className="linkedin"><i className="fa fa-linkedin"></i></a>
-
+            <Link href="#" className="facebook"><i className="fa fa-facebook"></i></Link> 
+            <Link href="#" className="twitter"><i className="fa fa-twitter"></i></Link> 
+            <Link href="#" className="reddit"><i className="fa fa-reddit-alien"></i></Link> 
+            <Link href="#" className="pininterest"><i className="fa fa-pinterest"></i></Link> 
+            <Link href="#" className="linkedin"><i className="fa fa-linkedin"></i></Link>
         </div>
      ); 
 }

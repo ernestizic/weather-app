@@ -82,15 +82,6 @@ code {
 .search {
   width: 100%;
 }
-
-.rate {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-.rate li{
-  float: left;
-}
 .checked {
   color: orange
 }
@@ -107,8 +98,8 @@ code {
 .icon-bar a {
   display: block;
   text-align: center;
-  height: 45px;
   width: 50px;
+  padding: 10px;
   transition: all 0.3s ease;
   color: white;
   font-size: 20px;
