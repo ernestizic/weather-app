@@ -5,7 +5,8 @@ import AboutPage from './components/pages/AboutPage';
 import FreeBookPage from './components/pages/FreeBookPage';
 import BookDetailPage from "./components/pages/BookDetailPage";
 import Social from "./components/ui/Social";
-//import Footer from "./components/ui/Footer";
+import Footer from "./components/ui/Footer";
+import NotFound from "./components/pages/NotFound";
 
 
 function App() {
@@ -19,8 +20,11 @@ function App() {
           <Route path="/about" component={AboutPage} />
           <Route path="/freebook" component={FreeBookPage} />
           <Route path="/books/:book_id" component={BookDetailPage}/>
+          <Route path="*">
+            <NotFound />
+          </Route>
         </Switch>
-
+        <Footer />
       </div>
     </BrowserRouter>
   );

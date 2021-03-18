@@ -1,3 +1,4 @@
+/*
 import React, { useContext } from 'react';
 import { BookContext } from '../../contexts/BookContext';
 import Spinner from '../ui/Spinner';
@@ -26,3 +27,5 @@ const BookGrid = () => {
 }
  
 export default BookGrid;
+
+*/

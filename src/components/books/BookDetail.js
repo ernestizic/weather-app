@@ -13,10 +13,10 @@ const BookDetail = () => {
 
     useEffect(() => {
         axios.get(`https://api.itbook.store/1.0/books/${book_id}`)
-            .then(res =>
-                    //console.log(res.data)
-                    setBookDetail(res.data)
-                )
+            .then(res => {
+                 //console.log(res.data)
+                 setBookDetail(res.data)
+            })
     }, [book_id])
 
     const book = bookDetail ? (
@@ -34,6 +34,10 @@ const BookDetail = () => {
                         <table className="table table-striped">
 
                             <tbody>
+                                <tr>
+                                    <td>error</td>
+                                    <td>{bookDetail.error}</td>
+                                </tr>
                                 <tr>
                                     <td>eBook</td>
                                     <td>{bookDetail.price}</td>

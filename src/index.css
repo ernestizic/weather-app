@@ -78,6 +78,7 @@ code {
   background-color: #134b72;
   color: white;
   text-align: center;
+  margin-top: 100px;
 }
 .search {
   width: 100%;
@@ -93,6 +94,7 @@ code {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  z-index: 1;
 }
 
 .icon-bar a {
