@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 const Social = () => {
 
     return ( 
-        <div>
+        <div className="social-icons">
             <div className="icon-bar">
                 <Link href="#" className="facebook"><i className="fa fa-facebook"></i></Link> 
                 <Link href="#" className="twitter"><i className="fa fa-twitter"></i></Link> 

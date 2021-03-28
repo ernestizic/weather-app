@@ -1,18 +1,3 @@
-#welcome-div {
-  background: #f0f0f0;
-  padding: 20px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-#welcome-div h2 {
-  color: #0c2e46;
-}
-
-#welcome-div h3 {
-  color: #b2395b;
-}
-
 .App {
   position: relative;
   min-height: 100vh;
@@ -58,5 +43,84 @@ body {
 
 .search {
   width: 100%;
+}
+
+#welcome-div {
+  background: #f0f0f0;
+  padding: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#welcome-div h2 {
+  color: #0c2e46;
+}
+
+#welcome-div h3 {
+  color: #b2395b;
+}
+
+.footer {
+  background-color: #134b72;
+  color: white;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.social-icons {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.social-icons a {
+  display: block;
+  text-align: center;
+  width: 50px;
+  padding: 10px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+.social-icons a:hover {
+  width: 65px;
+}
+
+.social-icons .facebook {
+  background: #3B5998;
+}
+
+.social-icons .twitter {
+  background: #55ACEE;
+}
+
+.social-icons .reddit {
+  background: orangered;
+}
+
+.social-icons .pininterest {
+  background: #b41414;
+}
+
+.social-icons .linkedin {
+  background: #007bb5;
+}
+
+.social-icons .toggle-icons {
+  padding-left: 5px;
+  font-size: 20px;
+}
+
+.grids {
+  text-decoration: none;
+}
+
+.card {
+  margin: 10px 0;
+  border: 1px solid black;
 }
 /*# sourceMappingURL=style.css.map */
