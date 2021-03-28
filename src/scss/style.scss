@@ -1,4 +1,5 @@
 @import "config";
+@import "mobile";
 
 .App {
   position: relative;
@@ -27,6 +28,10 @@ body {
   padding: 20px;
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
+
+  .nav-item {
+    padding-right: 25px;
+  }
 
   .nav-link {
     color: $light-color;
@@ -120,12 +125,17 @@ body {
   }
 }
 
+// cards display on homepage
 .grids{
   text-decoration: none;
 }
 
 .card {
   margin: 10px 0;
-  border: 1px solid black;
+  border: none;
+
+  &:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
 }
 
