@@ -7,7 +7,7 @@ const AboutPage = () => {
     return ( 
         <React.Fragment>
             <div className="container-fluid" id="welcome-div">
-                <h2 style={{color: '#030d44', paddingLeft: '40px'}}> <Link className="links" to="/"> Home </Link> / About</h2>
+                <h2 style={{color: '#030d44', paddingLeft: '40px'}}> <Link className="link" to="/"> Home </Link> / About</h2>
             </div>
             <div className="container">
                 <div className="row">

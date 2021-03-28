@@ -7,7 +7,7 @@ const Searchbar = () => {
 
     const [text, setText] = useState("");
 
-    const handleSearch =(e)=> {
+    const handleSearch = async(e)=> {
         e.preventDefault();
         //console.log(text)
         getQuery(text);

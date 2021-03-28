@@ -11,7 +11,7 @@ const FreeBookPage = () => {
                 <h2 style={{color: '#030d44', textAlign: 'center'}}> Free IT, Programming and Computer Science Books </h2>
             </div>
             <div className="container">
-                <h5 style={{paddingTop: "20px"}}> <Link className="links" to="/"> Home </Link> / Free eBooks </h5>
+                <h5 style={{paddingTop: "20px"}}> <Link className="link" to="/"> Home </Link> / Free eBooks </h5>
                 <BookContextProvider>
                     <FreeBook />
                 </BookContextProvider>

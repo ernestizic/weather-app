@@ -14,16 +14,18 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Navbar />
-        <Social />
-        <Switch>
-          <Route exact path="/" component={IndexPage} />
-          <Route path="/about" component={AboutPage} />
-          <Route path="/freebook" component={FreeBookPage} />
-          <Route path="/books/:book_id" component={BookDetailPage}/>
-          <Route path="*">
-            <NotFound />
-          </Route>
-        </Switch>
+        <div className="content-wrap">
+          <Social />
+          <Switch>
+            <Route exact path="/" component={IndexPage} />
+            <Route path="/about" component={AboutPage} />
+            <Route path="/freebook" component={FreeBookPage} />
+            <Route path="/books/:book_id" component={BookDetailPage}/>
+            <Route path="*">
+              <NotFound />
+            </Route>
+          </Switch>
+        </div>
         <Footer />
       </div>
     </BrowserRouter>

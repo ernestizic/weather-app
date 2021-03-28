@@ -1,0 +1,51 @@
+@import "config";
+@import "indexpage";
+
+.App {
+  position: relative;
+  min-height: 100vh;
+}
+
+.content-wrap {
+  padding-bottom: 120px;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #505050;
+}
+
+.link {
+  text-decoration: none;
+}
+
+//Navbar styling
+.navbar {
+  background: $primary-color;
+  padding: 20px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+
+  .nav-link {
+    color: $light-color;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+
+  &-toggler {
+    margin: none;
+  }
+
+  &-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(33,199,200)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+}
+
+.search {
+    width: 100%;
+}

@@ -19,6 +19,8 @@ const BookDetail = () => {
             })
     }, [book_id])
 
+
+
     const book = bookDetail ? (
         <React.Fragment>
             <div className="container-fluid"id="welcome-div">
@@ -30,14 +32,10 @@ const BookDetail = () => {
                     <div className="col-md-3" style={{background:"#f8f8f8"}}>
                         <img src={bookDetail.image} alt="book-img" className="img-fluid" />
                     </div>
-                    <div className="col-md-9">
+                    <div className="col-md-9 table-details">
                         <table className="table table-striped">
 
                             <tbody>
-                                <tr>
-                                    <td>error</td>
-                                    <td>{bookDetail.error}</td>
-                                </tr>
                                 <tr>
                                     <td>eBook</td>
                                     <td>{bookDetail.price}</td>
@@ -70,8 +68,18 @@ const BookDetail = () => {
 
                         </table>
 
-                        <h5>Description</h5>
-                        <p>{bookDetail.desc}</p>
+                        <ul>
+                            <li>
+                                <h5>Description</h5>
+                                <p id="desc">{bookDetail.desc}</p>
+                            </li>
+
+                            <li>
+                                <h5>Free eBook</h5>
+                                <p> {bookDetail.pdf["Free eBook"]} </p>
+                            </li>
+                        </ul>
+                        
                     </div>
                 </div>
             </div>

@@ -6,7 +6,6 @@ export const BookContext = createContext();
 const BookContextProvider =(props)=> {
     const [books, setBooks] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-    //const [query, setQuery] = useState('');
 
     useEffect(() => {
         fetchBooks();
