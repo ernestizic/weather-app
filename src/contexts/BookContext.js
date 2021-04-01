@@ -24,18 +24,8 @@ const BookContextProvider =(props)=> {
             });
     };
 
-
-    
-    const getQuery =(text)=> {
-        axios.get(`https://api.itbook.store/1.0/search/${text}`)
-            .then(res => 
-                //console.log(res.data)
-                setBooks(res.data.books)   
-            );
-    };    
-
     return (
-        <BookContext.Provider value={{books, isLoading, getQuery}}> 
+        <BookContext.Provider value={{books, isLoading}}> 
             {props.children}
         </BookContext.Provider>
     )

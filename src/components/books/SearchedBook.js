@@ -1,31 +1,27 @@
-/*
 import React, { useContext } from 'react';
-import { BookContext } from '../../contexts/BookContext';
+import { SearchBooksContext } from '../../contexts/SearchBooksContext';
 import Spinner from '../ui/Spinner';
 import BookItem from './BookItem';
 
-const BookGrid = () => {
+const SearchedBook = () => {
+    const {search, isLoading} = useContext(SearchBooksContext);
 
-    const {isLoading, searched} = useContext(BookContext);
-
-    let bookGrid = isLoading ? (
+    let books = isLoading ? (
         <div>
             <Spinner />
         </div>
     ) : (
-        searched.map(book => (
+        search.map(book => (
             <BookItem key={book.isbn13} book={book} />
         ))
     )
     return ( 
         <div className="container">
             <div className="row">
-                {bookGrid}
+                {books}
             </div>
         </div>
      );
 }
  
-export default BookGrid;
-
-*/
+export default SearchedBook;

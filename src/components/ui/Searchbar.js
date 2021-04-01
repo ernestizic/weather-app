@@ -1,9 +1,9 @@
 import React, { useContext,useState } from 'react';
-import { BookContext } from '../../contexts/BookContext';
+import { SearchBooksContext } from '../../contexts/SearchBooksContext';
 
 const Searchbar = () => {
 
-    const {getQuery} = useContext(BookContext);
+    const {getQuery} = useContext(SearchBooksContext);
 
     const [text, setText] = useState("");
 

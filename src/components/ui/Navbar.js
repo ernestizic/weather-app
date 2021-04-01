@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import BookContextProvider from '../../contexts/BookContext';
+import SearchBooksContextProvider from '../../contexts/SearchBooksContext';
 import logo from '../../img/itbookstorelogo.png'
 import Searchbar from './Searchbar';
 
@@ -29,9 +29,9 @@ const Navbar = () => {
                 </div>
                 
             </div>
-            <BookContextProvider>
+            <SearchBooksContextProvider>
                 <Searchbar />
-            </BookContextProvider>
+            </SearchBooksContextProvider>
         </nav>
      );
 }
