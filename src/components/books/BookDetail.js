@@ -68,22 +68,22 @@ const BookDetail = () => {
 
                         </table>
 
-                        <ul class="nav nav-tabs">
-                            <li class="active"><a data-toggle="tab" href="#home">Description</a></li>
+                        <ul className="nav nav-tabs">
+                            <li className="active"><a data-toggle="tab" href="#home">Description</a></li>
                             <li><a data-toggle="tab" href="#menu1">Free downloads</a></li>
                             <li><a data-toggle="tab" href="#menu2">Authors</a></li>
                         </ul>
 
-                        <div class="tab-content">
-                            <div id="home" class="tab-pane fade in active">
+                        <div className="tab-content">
+                            <div id="home" className="tab-pane fade in active">
                                 <p id="desc">{bookDetail.desc}</p>
                             </div>
 
-                            <div id="menu1" class="tab-pane fade">
+                            <div id="menu1" className="tab-pane fade">
                                 <h4>Free eBook:</h4>
                                 <p> {bookDetail.pdf["Free eBook"]} </p>
                             </div>
-                            <div id="menu2" class="tab-pane fade">
+                            <div id="menu2" className="tab-pane fade">
                                 <p> {bookDetail.authors} </p>
                             </div>
                         </div>

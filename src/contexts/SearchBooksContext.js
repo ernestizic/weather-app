@@ -1,7 +1,6 @@
+/* NOT IN USE
+
 import React, { createContext, useState, useEffect } from 'react';
-//import { BookContext } from './BookContext';
-//import Spinner from '../components/ui/Spinner';
-//import BookItem from '../components/books/BookItem';
 import axios from 'axios';
 
 export const SearchBooksContext = createContext();
@@ -32,3 +31,6 @@ const SearchBooksContextProvider =(props)=> {
     );
 }
 export default SearchBooksContextProvider;
+
+
+*/

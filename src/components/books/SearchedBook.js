@@ -1,3 +1,5 @@
+/*
+
 import React, { useContext } from 'react';
 import { SearchBooksContext } from '../../contexts/SearchBooksContext';
 import Spinner from '../ui/Spinner';
@@ -25,3 +27,5 @@ const SearchedBook = () => {
 }
  
 export default SearchedBook;
+
+*/

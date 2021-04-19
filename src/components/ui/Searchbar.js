@@ -1,9 +1,9 @@
 import React, { useContext,useState } from 'react';
-import { SearchBooksContext } from '../../contexts/SearchBooksContext';
+import { BookContext } from '../../contexts/BookContext';
 
 const Searchbar = () => {
 
-    const {getQuery} = useContext(SearchBooksContext);
+    const {getQuery} = useContext(BookContext);
 
     const [text, setText] = useState("");
 
@@ -11,6 +11,7 @@ const Searchbar = () => {
         e.preventDefault();
         //console.log(text)
         getQuery(text);
+        setText("");
     }
 
     return ( 
