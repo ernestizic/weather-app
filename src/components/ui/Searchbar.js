@@ -1,14 +1,19 @@
 import React, { useContext,useState } from 'react';
-import { BookContext } from '../../contexts/BookContext';
+import { SearchBooksContext } from '../../contexts/SearchBooksContext';
+import {useHistory} from 'react-router';
 
 const Searchbar = () => {
 
-    const {getQuery} = useContext(BookContext);
+    const {getQuery} = useContext(SearchBooksContext);
+    const history = useHistory();
 
     const [text, setText] = useState("");
 
     const handleSearch = async(e)=> {
         e.preventDefault();
+        history.push ({
+            pathname: '/search'
+        })
         //console.log(text)
         getQuery(text);
         setText("");

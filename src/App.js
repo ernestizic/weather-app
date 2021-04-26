@@ -7,13 +7,15 @@ import BookDetailPage from "./components/pages/BookDetailPage";
 import Social from "./components/ui/Social";
 import Footer from "./components/ui/Footer";
 import NotFound from "./components/pages/NotFound";
-//import SearchPage from "./components/pages/SearchPage";
+import SearchPage from "./components/pages/SearchPage";
+import SearchBooksContextProvider from "./contexts/SearchBooksContext";
 
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
+        <SearchBooksContextProvider>
         <Navbar />
         <div className="content-wrap">
           <Social />
@@ -21,13 +23,14 @@ function App() {
             <Route exact path="/" component={IndexPage} />
             <Route path="/about" component={AboutPage} />
             <Route path="/freebook" component={FreeBookPage} />
-            {/*<Route path="/search" component={SearchPage}/>*/}
+            <Route path="/search" component={SearchPage}/>
             <Route path="/books/:book_id" component={BookDetailPage}/>
             <Route path="*">
               <NotFound />
             </Route>
           </Switch>
         </div>
+        </SearchBooksContextProvider>
         <Footer />
       </div>
     </BrowserRouter>

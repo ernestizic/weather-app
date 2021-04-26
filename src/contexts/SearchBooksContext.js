@@ -1,4 +1,3 @@
-/* NOT IN USE
 
 import React, { createContext, useState, useEffect } from 'react';
 import axios from 'axios';
@@ -31,6 +30,3 @@ const SearchBooksContextProvider =(props)=> {
     );
 }
 export default SearchBooksContextProvider;
-
-
-*/

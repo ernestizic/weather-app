@@ -1,4 +1,3 @@
-/*
 
 import React, { useContext } from 'react';
 import { SearchBooksContext } from '../../contexts/SearchBooksContext';
@@ -13,9 +12,12 @@ const SearchedBook = () => {
             <Spinner />
         </div>
     ) : (
-        search.map(book => (
+        search.length ? (search.map(book => (
             <BookItem key={book.isbn13} book={book} />
-        ))
+        ))) : (
+            <div style={{textAlign: 'center'}}>No book containing your search term</div>
+        )
+
     )
     return ( 
         <div className="container">
@@ -27,5 +29,3 @@ const SearchedBook = () => {
 }
  
 export default SearchedBook;
-
-*/

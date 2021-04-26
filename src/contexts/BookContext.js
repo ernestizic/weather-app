@@ -24,6 +24,11 @@ const BookContextProvider =(props)=> {
             });
     };
 
+    const freeBooks =()=> {
+        
+    }
+
+    /*
     const getQuery =(text)=> {
         axios.get(`https://api.itbook.store/1.0/search/${text}`)
             .then(res => 
@@ -38,10 +43,10 @@ const BookContextProvider =(props)=> {
                 console.log(error);
                 setIsLoading(true);
             });
-    }; 
+    }; */
 
     return (
-        <BookContext.Provider value={{books, isLoading, getQuery}}> 
+        <BookContext.Provider value={{books, isLoading}}> 
             {props.children}
         </BookContext.Provider>
     )
