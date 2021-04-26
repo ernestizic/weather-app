@@ -17,7 +17,7 @@ const SearchBooksContextProvider =(props)=> {
         axios.get(`https://api.itbook.store/1.0/search/${text}`)
             .then(res => 
                {
-                console.log(res.data)
+                //console.log(res.data)
                 setSearch(res.data.books)
                 setIsLoading(false)
                }   

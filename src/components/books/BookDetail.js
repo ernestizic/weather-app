@@ -14,7 +14,7 @@ const BookDetail = () => {
     useEffect(() => {
         axios.get(`https://api.itbook.store/1.0/books/${book_id}`)
             .then(res => {
-                 //console.log(res.data)
+                 console.log(res.data)
                  setBookDetail(res.data)
             })
     }, [book_id])
@@ -64,6 +64,14 @@ const BookDetail = () => {
                                     <td>Language</td>
                                     <td>{bookDetail.language}</td>
                                 </tr>
+                                <tr>
+                                    <td>ISBN-10</td>
+                                    <td>{bookDetail.isbn10}</td>
+                                </tr>
+                                <tr>
+                                    <td>ISBN-13</td>
+                                    <td>{bookDetail.isbn13}</td>
+                                </tr>
                             </tbody>
 
                         </table>
@@ -81,7 +89,8 @@ const BookDetail = () => {
 
                             <div id="menu1" className="tab-pane fade">
                                 <h4>Free eBook:</h4>
-                                <p> {bookDetail.pdf["Free eBook"]} </p>
+                                {bookDetail.pdf ? (<p> {bookDetail.pdf["Free eBook"]} </p>) : (<p>Not available</p>)}
+
                             </div>
                             <div id="menu2" className="tab-pane fade">
                                 <p> {bookDetail.authors} </p>
