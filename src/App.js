@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Navbar from "./components/ui/Navbar";
 import IndexPage from './components/pages/IndexPage';
 import AboutPage from './components/pages/AboutPage';
-import FreeBookPage from './components/pages/FreeBookPage';
+//import FreeBookPage from './components/pages/FreeBookPage';
 import BookDetailPage from "./components/pages/BookDetailPage";
 import Social from "./components/ui/Social";
 import Footer from "./components/ui/Footer";
@@ -22,7 +22,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={IndexPage} />
             <Route path="/about" component={AboutPage} />
-            <Route path="/freebook" component={FreeBookPage} />
+            {/*<Route path="/freebook" component={FreeBookPage} />*/}
             <Route path="/search" component={SearchPage}/>
             <Route path="/books/:book_id" component={BookDetailPage}/>
             <Route path="*">
