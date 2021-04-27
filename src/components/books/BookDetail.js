@@ -12,7 +12,7 @@ const BookDetail = () => {
     const [bookDetail, setBookDetail] = useState(null);
 
     useEffect(() => {
-        axios.get(`https://api.itbook.store/1.0/books/${book_id}`)
+        axios.get(`https://cors-anywhere.herokuapp.com/https://api.itbook.store/1.0/books/${book_id}`)
             .then(res => {
                  console.log(res.data)
                  setBookDetail(res.data)
