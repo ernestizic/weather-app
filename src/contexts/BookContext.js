@@ -24,26 +24,6 @@ const BookContextProvider =(props)=> {
             });
     };
 
-    const freeBooks =()=> {
-        
-    }
-
-    /*
-    const getQuery =(text)=> {
-        axios.get(`https://api.itbook.store/1.0/search/${text}`)
-            .then(res => 
-               {
-                console.log(res.data.books)
-                setIsLoading(true)
-                setBooks(res.data.books)
-                setIsLoading(false)
-               }   
-            )
-            .catch(error => {
-                console.log(error);
-                setIsLoading(true);
-            });
-    }; */
 
     return (
         <BookContext.Provider value={{books, isLoading}}> 

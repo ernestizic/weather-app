@@ -21,7 +21,11 @@ const SearchBooksContextProvider =(props)=> {
                 setSearch(res.data.books)
                 setIsLoading(false)
                }   
-            );
+            )
+            .catch(error => {
+                console.log(error);
+                setIsLoading(true);
+            });
     }; 
     return ( 
         <SearchBooksContext.Provider value={{search, isLoading, getQuery}}>
