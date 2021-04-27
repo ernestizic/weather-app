@@ -12,7 +12,7 @@ const BookContextProvider =(props)=> {
     }, []);
 
     const fetchBooks =()=> {
-        axios.get('https://api.itbook.store/1.0/new')
+        axios.get('https://cors-anywhere.herokuapp.com/https://api.itbook.store/1.0/new')
             .then(res => {
                 console.log(res.data.books)
                 setBooks(res.data.books);
