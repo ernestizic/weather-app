@@ -12,9 +12,9 @@ const BookDetail = () => {
     const [bookDetail, setBookDetail] = useState(null);
 
     useEffect(() => {
-        axios.get(`https://cors.bridged.cc/https://api.itbook.store/1.0/books/${book_id}`)
+        axios.get(`https://api.itbook.store/1.0/books/${book_id}`)
             .then(res => {
-                 console.log(res.data)
+                 //console.log(res.data)
                  setBookDetail(res.data)
             })
     }, [book_id])
@@ -38,11 +38,17 @@ const BookDetail = () => {
                             <tbody>
                                 <tr>
                                     <td>eBook</td>
-                                    <td>{bookDetail.price}</td>
+                                    <td>
+                                        {bookDetail.price === '$0.00' ? (
+                                            <p style={{color: '#b2395b', fontWeight: 'bold'}}>Free eBook</p>
+                                            ) : (
+                                            <p className="card-text" style={{color: '#b2395b', fontWeight: 'bold'}}>{bookDetail.price}</p>
+                                        ) }
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Rating</td>
-                                    <td>{bookDetail.rating} of 5 <Rating /> </td>
+                                    <td> <Rating bookRating={bookDetail}/> </td>
                                 </tr>
                                 <tr>
                                     <td>Author</td>

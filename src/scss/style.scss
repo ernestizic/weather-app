@@ -37,7 +37,7 @@ body {
     color: $light-color;
 
     &:hover {
-      color: $secondary-color;
+      text-decoration: underline;
     }
   }
 
@@ -128,15 +128,33 @@ body {
 // cards display on homepage
 .grids{
   text-decoration: none;
+  font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 15px;
+
+  .card {
+    margin: 10px 0;
+    border: none;
+    
+    &-title:hover {
+      text-decoration: underline;
+    }
+  
+    &:hover {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+  }
+  
+  .rate-price{
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
-.card {
-  margin: 10px 0;
-  border: none;
-
-  &:hover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
+.rating {
+  color: #b4b4b4;
+}
+.checked {
+  color: #ffa500;
 }
 
 .tab-content{

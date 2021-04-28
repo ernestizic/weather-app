@@ -40,7 +40,7 @@ body {
 }
 
 .navbar .nav-link:hover {
-  color: #b2395b;
+  text-decoration: underline;
 }
 
 .navbar-toggler {
@@ -127,15 +127,34 @@ body {
 
 .grids {
   text-decoration: none;
+  font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 15px;
 }
 
-.card {
+.grids .card {
   margin: 10px 0;
   border: none;
 }
 
-.card:hover {
+.grids .card-title:hover {
+  text-decoration: underline;
+}
+
+.grids .card:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.grids .rate-price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating {
+  color: #b4b4b4;
+}
+
+.checked {
+  color: #ffa500;
 }
 
 .tab-content p {
