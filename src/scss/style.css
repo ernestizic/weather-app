@@ -160,4 +160,17 @@ body {
 .tab-content p {
   margin-top: 20px;
 }
+
+.details-left-img {
+  background-color: #f8f8f8;
+}
+
+.details-left-btn {
+  margin-top: 20px;
+}
+
+.details-left-btn .btn {
+  margin-top: 20px;
+  width: 100%;
+}
 /*# sourceMappingURL=style.css.map */

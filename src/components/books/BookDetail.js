@@ -29,8 +29,22 @@ const BookDetail = () => {
 
             <div className="container">
                 <div className="row">
-                    <div className="col-md-3" style={{background:"#f8f8f8"}}>
-                        <img src={bookDetail.image} alt="book-img" className="img-fluid" />
+                    <div className="col-md-3">
+                        <div className='details-left-img'>
+                            <img src={bookDetail.image} alt="book-img" className="img-fluid" />
+                        </div>
+
+                        {bookDetail.pdf ? (
+                            <div className='details-left-btn'>
+                                <a href={bookDetail.pdf["Free eBook"]} className="btn btn-primary">Free Download</a>
+                            </div>
+                        ) : (
+                            <div className='details-left-btn'>
+                                <button className="btn btn-danger">Buy</button>
+                                <button className="btn btn-secondary">Preview</button>
+                            </div>
+                        )}
+                        
                     </div>
                     <div className="col-md-9 table-details">
                         <table className="table table-striped">
