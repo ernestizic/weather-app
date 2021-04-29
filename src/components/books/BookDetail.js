@@ -83,22 +83,22 @@ const BookDetail = () => {
                         </table>
 
                         <ul className="nav nav-tabs">
-                            <li className="active"><a data-toggle="tab" href="#home">Description</a></li>
-                            <li><a data-toggle="tab" href="#menu1">Free downloads</a></li>
-                            <li><a data-toggle="tab" href="#menu2">Authors</a></li>
+                            <li className="nav-item"><a className="nav-link active" data-toggle="tab" href="#home">Description</a></li>
+                            <li className="nav-item"><a className="nav-link" data-toggle="tab" href="#menu1">Free downloads</a></li>
+                            <li className="nav-item"><a className="nav-link" data-toggle="tab" href="#menu2">Authors</a></li>
                         </ul>
 
                         <div className="tab-content">
-                            <div id="home" className="tab-pane fade in active">
+                            <div id="home" className="container tab-pane active">
                                 <p id="desc">{bookDetail.desc}</p>
                             </div>
 
-                            <div id="menu1" className="tab-pane fade">
+                            <div id="menu1" className="container tab-pane fade">
                                 <h4>Free eBook:</h4>
                                 {bookDetail.pdf ? (<p> {bookDetail.pdf["Free eBook"]} </p>) : (<p>Not available</p>)}
 
                             </div>
-                            <div id="menu2" className="tab-pane fade">
+                            <div id="menu2" className="container tab-pane fade">
                                 <p> {bookDetail.authors} </p>
                             </div>
                         </div>

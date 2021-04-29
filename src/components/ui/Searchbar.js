@@ -16,7 +16,7 @@ const Searchbar = () => {
         })
         //console.log(text)
         getQuery(text);
-        setText("");
+        //setText("");
     }
 
     return ( 
@@ -28,6 +28,7 @@ const Searchbar = () => {
                     placeholder="Search books by Title, Author or ISBN"
                     value={text}
                     onChange={(e)=> setText(e.target.value)} 
+                    required
                 />
                 <div className="input-group-append">
                     <button className="btn btn-danger" type="submit"> 
