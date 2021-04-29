@@ -94,8 +94,8 @@ const BookDetail = () => {
                             </div>
 
                             <div id="menu1" className="container tab-pane fade">
-                                <h4>Free eBook:</h4>
-                                {bookDetail.pdf ? (<p> {bookDetail.pdf["Free eBook"]} </p>) : (<p>Not available</p>)}
+                                <p>Free eBook:</p>
+                                {bookDetail.pdf ? (<a href={bookDetail.pdf["Free eBook"]} title="Free eBook"> {bookDetail.pdf["Free eBook"]} </a>) : (<p>Not available</p>)}
 
                             </div>
                             <div id="menu2" className="container tab-pane fade">
