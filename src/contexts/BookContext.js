@@ -25,9 +25,16 @@ const BookContextProvider =(props)=> {
             });
     };
 
+    const fetchFreeBook =()=> {
+        axios.get('https://cors.bridged.cc/https://api.itbook.store/1.0/new')
+            .then(res =>
+                setBooks([...books.filter(book => book.price !== "$0.00")])
+            );
+    };
+
 
     return (
-        <BookContext.Provider value={{books, isLoading}}> 
+        <BookContext.Provider value={{books, isLoading, fetchFreeBook}}> 
             {props.children}
         </BookContext.Provider>
     )

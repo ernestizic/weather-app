@@ -1,12 +1,11 @@
-/*
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useContext} from 'react';
 import { BookContext } from '../../contexts/BookContext';
 
 const FreeBook = () => {
-    const {books} = useContext(BookContext);
+    const {fetchFreeBook} = useContext(BookContext);
 
-    console.log(books.length)
-    const [freeBook, setFreeBook] = useState([])
+    console.log(fetchFreeBook.length)
+    
 
     return ( 
         <div>
@@ -16,4 +15,3 @@ const FreeBook = () => {
 }
  
 export default FreeBook;
-*/

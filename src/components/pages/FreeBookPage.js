@@ -1,4 +1,3 @@
-/*
 import React from 'react';
 import { Link } from 'react-router-dom';
 import BookContextProvider from '../../contexts/BookContext';
@@ -22,4 +21,3 @@ const FreeBookPage = () => {
 }
  
 export default FreeBookPage;
-*/
