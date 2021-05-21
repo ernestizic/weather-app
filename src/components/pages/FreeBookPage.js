@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import BookContextProvider from '../../contexts/BookContext';
 import FreeBook from '../books/FreeBook';
 
 const FreeBookPage = () => {
@@ -12,9 +11,7 @@ const FreeBookPage = () => {
             </div>
             <div className="container">
                 <h5 style={{paddingTop: "20px"}}> <Link className="link" to="/"> Home </Link> / Free eBooks </h5>
-                <BookContextProvider>
-                    <FreeBook />
-                </BookContextProvider>
+                <FreeBook />
             </div>
         </React.Fragment>
      );

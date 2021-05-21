@@ -9,6 +9,7 @@ import Footer from "./components/ui/Footer";
 import NotFound from "./components/pages/NotFound";
 import SearchPage from "./components/pages/SearchPage";
 import SearchBooksContextProvider from "./contexts/SearchBooksContext";
+import BookContextProvider from './contexts/BookContext';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <SearchBooksContextProvider>
+        <BookContextProvider>
         <Navbar />
         <div className="content-wrap">
           <Social />
@@ -30,6 +32,7 @@ function App() {
             </Route>
           </Switch>
         </div>
+        </BookContextProvider>
         </SearchBooksContextProvider>
         <Footer />
       </div>

@@ -1,5 +1,4 @@
 import React from 'react';
-import BookContextProvider from '../../contexts/BookContext';
 import BookGrid from '../books/BookGrid';
 
 const IndexPage = () => {
@@ -12,9 +11,7 @@ const IndexPage = () => {
             </div>
             <div className="container">
                 <h3 style={{paddingTop: "20px"}}>New Releases Books</h3>
-                <BookContextProvider>
-                    <BookGrid />
-                </BookContextProvider>
+                <BookGrid />
             </div>
         </React.Fragment>
         
