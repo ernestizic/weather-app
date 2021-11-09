@@ -1,43 +1,36 @@
-import React, { useContext,useState } from 'react';
-import { SearchBooksContext } from '../../contexts/SearchBooksContext';
+import React, { useContext, useState } from "react";
+import { StyledSearchbar } from "../styles/Searchbar.styled";
+import { AiOutlineSearch } from "react-icons/ai";
+import { SearchCityContext } from "../../contexts/SearchCityContext";
 import {useHistory} from 'react-router';
 
 const Searchbar = () => {
+  const { getQuery } = useContext(SearchCityContext);
+  const history = useHistory();
 
-    const {getQuery} = useContext(SearchBooksContext);
-    const history = useHistory();
+  const [keyword, setKeyword] = useState("");
 
-    const [text, setText] = useState("");
+  const handleSearch = async (e) => {
+    e.preventDefault();
+    history.push({
+      pathname: "/search",
+    });
+    getQuery(keyword);
+  };
 
-    const handleSearch = async(e)=> {
-        e.preventDefault();
-        history.push ({
-            pathname: '/search'
-        })
-        //console.log(text)
-        getQuery(text);
-        //setText("");
-    }
+  return (
+    <StyledSearchbar onSubmit={handleSearch}>
+      <AiOutlineSearch className='search-icon' />
+      <input
+        type='search'
+        placeholder='Check for the weather in a location'
+        value={keyword}
+        onChange={(e) => setKeyword(e.target.value)}
+        required
+      />
+      <button type='submit'>Search</button>
+    </StyledSearchbar>
+  );
+};
 
-    return ( 
-        <form className="search" onSubmit={handleSearch}>
-            <div className="input-group">
-                <input 
-                    type="search" 
-                    className="form-control"
-                    placeholder="Search books by Title, Author or ISBN"
-                    value={text}
-                    onChange={(e)=> setText(e.target.value)} 
-                    required
-                />
-                <div className="input-group-append">
-                    <button className="btn btn-danger" type="submit"> 
-                        <i className="fa fa-search"></i>
-                    </button>
-                </div>
-            </div>
-        </form>
-     );
-}
- 
 export default Searchbar;
