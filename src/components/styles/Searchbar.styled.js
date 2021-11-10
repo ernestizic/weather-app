@@ -18,6 +18,7 @@ export const StyledSearchbar = styled.form`
     &::placeholder {
       color: #fff;
     }
+
   }
 
   button {
@@ -34,6 +35,11 @@ export const StyledSearchbar = styled.form`
     }
     &:focus{
         background: #825cf1;
+    }
+
+    @media (max-width: 480px) {
+      right: 10px;
+      padding: 14px 30px;
     }
   }
 

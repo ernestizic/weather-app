@@ -6,6 +6,11 @@ export const StyledSearchPage = styled.div`
   min-height: 100vh;
   max-width: 832px;
   margin: 0 auto;
+
+  @media (max-width: 480px) {
+    max-width: 100%;
+    padding: 10px;
+  }
 `;
 
 export const ForecastContainer = styled.div`
@@ -55,5 +60,10 @@ export const Back = styled.button`
   }
   &:focus{
       background: #825cf1;
+  }
+
+  @media (max-width: 480px) {
+    top: 40px;
+    left: 10px;
   }
 `;

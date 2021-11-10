@@ -18,6 +18,10 @@ export const Forecast = styled.div`
   border-radius: 20px;
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 480px) {
+    overflow-x: scroll;
+  }
 `;
 
 export const TimeOfDay = styled.div`

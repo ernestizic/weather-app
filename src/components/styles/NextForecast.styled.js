@@ -25,10 +25,22 @@ export const NextForecastHeader = styled.div`
     letter-spacing: 0.05em;
     margin-bottom: 8px;
   }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+
+    button {
+      padding: 15px 20px;
+    }
+  }
 `;
 
 export const NextForecastBody = styled.div`
   display: flex;
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+  }
 `;
 
 export const ForecastContainer = styled.div`
@@ -37,6 +49,10 @@ export const ForecastContainer = styled.div`
   margin-top: 29px;
   border-radius: 20px;
   margin-right: 10px;
+
+  @media (max-width: 480px) {
+    width: 100%;
+  }
 `;
 export const DayForecast = styled.div`
   display: flex;
@@ -67,6 +83,11 @@ export const CityImageContainer = styled.div`
     width: 100%;
     height: 80%;
     position: relative;
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+    margin-left: 0;
   }
 `;
 
