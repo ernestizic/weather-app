@@ -7,6 +7,7 @@ import SearchCityContextProvider from "./contexts/SearchCityContext";
 
 function App() {
   return (
+    // wrap app with both context providers
     <ForecastContextProvider>
       <SearchCityContextProvider>
         <BrowserRouter>

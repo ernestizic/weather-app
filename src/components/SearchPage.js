@@ -8,6 +8,7 @@ import {useHistory} from 'react-router';
 import Spinner from './ui/Spinner'
 import {IoIosArrowBack} from 'react-icons/io';
 
+// Functional component to render search page
 const SearchPage = () => {
     const {search, isLoading} = useContext(SearchCityContext)
     const history = useHistory();

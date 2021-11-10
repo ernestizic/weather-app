@@ -13,10 +13,9 @@ import {
   CurrentWeather,
 } from "../styles/NextForecast.styled";
 
+// Next forecast component
 const NextForecast = () => {
   const { todayForecast } = useContext(ForecastContext);
-
-  console.log(todayForecast)
 
   return (
     <StyledNextForecast>

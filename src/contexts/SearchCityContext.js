@@ -12,6 +12,7 @@ const SearchCityContextProvider =(props)=> {
     const [isLoading, setIsLoading] = useState(true);
 
 
+    // Fetch weather data based on query from search form
     const getQuery = async(city)=> {
         setIsLoading(true)
         const res = await axios.get(

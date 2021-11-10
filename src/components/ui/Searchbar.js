@@ -4,12 +4,14 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { SearchCityContext } from "../../contexts/SearchCityContext";
 import {useHistory} from 'react-router';
 
+// Searchbar component
 const Searchbar = () => {
   const { getQuery } = useContext(SearchCityContext);
   const history = useHistory();
 
   const [keyword, setKeyword] = useState("");
 
+  // Handle search function on click of submit button
   const handleSearch = async (e) => {
     e.preventDefault();
     history.push({

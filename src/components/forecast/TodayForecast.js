@@ -5,6 +5,7 @@ import NextForecast from './NextForecast.js'
 import moment from 'moment'
 import Spinner from '../ui/Spinner'
 
+// Today forecast component
 const TodayForecast = () => {
   const { isLoading, todayForecast } = useContext(ForecastContext);
 

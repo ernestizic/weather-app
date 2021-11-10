@@ -11,6 +11,8 @@ const ForecastContextProvider = (props) => {
   const [lng, setLng] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
+
+// Get Users current location on page load
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((position) => {
       setLat(position.coords.latitude);
@@ -18,6 +20,7 @@ const ForecastContextProvider = (props) => {
     });
   }, []);
 
+  // Fetch weather data based on users current location
   useEffect(() => {
     const fetchWeatherData = async () => {
       const res = await axios.get(
