@@ -25,6 +25,10 @@ Pixel Perfect Replication of the design.
 
 ![Screen 2](./src/img/screen2.png)
 
+### Links
+
+- Live Solution URL: [weather app](https://urweather.netlify.app/)
+
 ### Notable codeblocks
 
 >`Get user's current location and puts it in state`
@@ -70,3 +74,5 @@ const getQuery = async (city) => {
 - [React Context API](https://reactjs.org/docs/context.html) - For state management
 - [Styled Components](https://styled-components.com/) - For styles
 - [Moment.js](https://momentjs.com/) - For date formatting
+
+**Note: I keep getting dates from the 90s. Don't know why
