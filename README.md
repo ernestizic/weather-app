@@ -27,7 +27,7 @@ Pixel Perfect Replication of the design.
 
 ### Notable codeblocks
 
-`Get user's current location and puts it in state`
+>`Get user's current location and puts it in state`
 
 ```javascript
 navigator.geolocation.getCurrentPosition((position) => {
@@ -36,7 +36,7 @@ navigator.geolocation.getCurrentPosition((position) => {
 });
 ```
 
-`Fetches weather report based on user location`
+>`Fetches weather report based on user location`
 
 ```javascript
 const fetchWeatherData = async () => {
@@ -49,7 +49,7 @@ const fetchWeatherData = async () => {
 };
 ```
 
-`Fetches weather report based on search query`
+>`Fetches weather report based on search query`
 
 ```javascript
 const getQuery = async (city) => {
