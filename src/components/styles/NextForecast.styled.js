@@ -96,12 +96,9 @@ export const ImgBg = styled.div`
     url(${LagosCity});
   height: 80%;
   padding: 20px;
-  background-repeat: repeat;
-//   background-position: center;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  background-size: contain;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   button {
     background: #8862fc;

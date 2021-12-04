@@ -24,10 +24,10 @@ const SearchPage = () => {
             <ForecastContainer>
                 <Weather>
                     <img src={`http://openweathermap.org/img/wn/${search.weather[0].icon}@2x.png`} alt='weather icon' />
-                    <p> Today <br /> <span> {moment(search.dt).format('dddd Do MMMM')} </span> </p>
+                    <p> Today <br /> <span> {moment(search.dt * 1000).format('dddd Do MMMM')} </span> </p>
                 </Weather>
-                <Degree>{search.main.temp}&deg;c</Degree>
-                <Country>{search.name}, {search.sys.country} . {moment(search.dt).format('LT')}</Country>
+                <Degree>{Math.round(search.main.temp)}&deg;c</Degree>
+                <Country>{search.name}, {search.sys.country} . {moment(search.dt * 1000).format('LT')}</Country>
             </ForecastContainer>
             )}
             

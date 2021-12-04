@@ -18,9 +18,9 @@ const TodayForecast = () => {
       <Forecast>
         {todayForecast.hourly.slice(0, 7).map((data) => (
           <TimeOfDay key={data.dt}>
-            <p>{data.temp} &deg;c</p>
+            <p>{Math.round(data.temp)} &deg;c</p>
             <img src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} alt='weather icon' />
-            <p>{moment(data.dt).format('LT')}</p>
+            <p>{moment(data.dt * 1000).format('LT')}</p>
           </TimeOfDay>
         ))}
       </Forecast>
