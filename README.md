@@ -75,4 +75,3 @@ const getQuery = async (city) => {
 - [Styled Components](https://styled-components.com/) - For styles
 - [Moment.js](https://momentjs.com/) - For date formatting
 
-**Note: I keep getting dates from the 90s. Don't know why
